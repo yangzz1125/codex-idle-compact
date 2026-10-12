@@ -1,8 +1,6 @@
-# Codex Idle Compact
+# Codex Idle Compact：闲置上下文自动压缩
 
 Windows Codex 桌面端的闲置上下文压缩插件。
-
-Automatically compact idle chats in Codex Desktop for Windows.
 
 当聊天**上下文超过 30,000 token**，且**回合结束后闲置超过 25 分钟**时，通过桌面原生接口请求压缩。等待和检查由本地进程执行，不调用模型；压缩本身使用 Codex 的模型服务。
 
@@ -38,7 +36,7 @@ Automatically compact idle chats in Codex Desktop for Windows.
 
 安装目录必须与桌面端实际使用的 Codex 数据目录一致。脚本生成本机 `.mcp.json`，注册本地插件市场并安装 `idle-compact@local-idle-compact`。仓库内的 `.mcp.example.json` 仅作结构示例；请通过安装脚本生成实际配置。
 
-在 Codex 插件页面启用“闲置自动压缩”，然后在 `Ctrl+,` → **Hooks / 钩子** → **From Plugins / 来自插件** 中审阅并信任它的四个钩子。安装不代表已信任钩子。
+在 Codex 插件页面启用“闲置自动压缩”，然后在 `Ctrl+,` → **钩子（Hooks）** → **来自插件（From Plugins）** 中审阅并信任它的四个钩子。安装不代表已信任钩子。
 
 安装或升级后，正常退出并重新打开 Codex，以加载新的 MCP 进程。重新打开目标聊天；旧聊天也可以通过插件工具 `idle_compact_watch` 登记，`idle_compact_status` 查看状态。
 
@@ -124,4 +122,4 @@ Install.ps1          生成本机配置并安装插件
 
 基于 [Codex Native Auto Compact](https://github.com/liekkasfc/codex-native-auto-compact) 的原生压缩思路改造，上游参考提交：`0e7c6e8246561d23e5a7448b02fb7d34f406d49d`。
 
-上游是界面用户脚本；本项目将计时迁入插件 MCP 进程，将界面点击改成 Windows 原生 IPC 请求。采用 MIT 许可证并保留上游版权声明，见 [LICENSE](LICENSE)。本项目为独立社区插件，与 OpenAI 无隶属关系。
+上游是界面用户脚本；本项目将计时迁入插件 MCP 进程，将界面点击改成 Windows 原生 IPC 请求。采用 MIT 许可证并保留上游版权声明，见 [许可证文件](LICENSE)。本项目为独立社区插件，与 OpenAI 无隶属关系。
