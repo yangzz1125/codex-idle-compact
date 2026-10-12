@@ -1,0 +1,19 @@
+{
+  "name": "idle-compact",
+  "version": "0.6.5",
+  "description": "Automatically compact idle local Codex chats after 25 minutes, using the existing Windows desktop IPC connection.",
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "闲置自动压缩",
+    "shortDescription": "聊天闲置 25 分钟后执行原生上下文压缩",
+    "longDescription": "本地计时，无需专用启动器或调试端口。任务结束且上下文足够大时，闲置 25 分钟执行一次原生压缩。支持当前 Windows Codex 桌面端。",
+    "developerName": "Local personal plugin",
+    "category": "Developer Tools",
+    "capabilities": ["Local MCP tools", "Lifecycle hooks"],
+    "defaultPrompt": ["查看当前聊天的闲置自动压缩状态"],
+    "brandColor": "#267366",
+    "composerIcon": "./assets/icon.svg"
+  }
+}

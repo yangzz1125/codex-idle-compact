@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "idle-compact": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/scripts/server.cjs"]
+    }
+  }
+}
